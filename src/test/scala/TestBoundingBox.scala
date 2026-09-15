@@ -26,7 +26,9 @@ class TestBoundingBox:
   // TODO reenable these commented-out tests after adding the missing case classes
   // (following the pattern of the other tests above)
 
-  //  testBoundingBox(simpleEllipse, -50, -30, 100, 60)
+  @Test
+  def testSimpleEllipse(): Unit =
+    testBoundingBox(simpleEllipse, -50, -30, 100, 60)
   //  testBoundingBox(basicGroup, -50, -30, 100, 70)
   //  testBoundingBox(simpleGroup, 150, 70, 350, 280)
   //  testBoundingBox(complexGroup, 30, 60, 470, 320)
