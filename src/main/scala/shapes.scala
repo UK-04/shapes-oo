@@ -13,5 +13,7 @@ enum Shape derives CanEqual:
   // TODO add missing cases (see test fixtures)
   case Location(x: Int, y: Int, shape: Shape)
   case Ellipse(halfWidth: Int, halfHeight: Int)
-  // case Group(shapes: Shape*)z
+  // case Group(shapes: Shape*)
+  case Group(shapes: Shape*)
+
 
