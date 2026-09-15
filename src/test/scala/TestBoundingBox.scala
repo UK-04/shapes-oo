@@ -61,12 +61,12 @@ class TestBoundingBox:
     assertEquals(60, height(simpleEllipse))
 
   // tests for scale function
-  // @Test
-  // def testScaleSimpleRectangle(): Unit =
-  //   assertEquals(Shape.Rectangle(160, 240), scale(simpleRectangle, 2))
+  @Test
+  def testScaleSimpleRectangle(): Unit =
+    assertEquals(Shape.Rectangle(160, 240), scale(simpleRectangle, 2))
 
-  // @Test
-  // def testScaleSimpleEllipse(): Unit =
-  //   assertEquals(Shape.Ellipse(100, 60), scale(simpleEllipse, 2))
+  @Test
+  def testScaleSimpleEllipse(): Unit =
+    assertEquals(Shape.Ellipse(100, 60), scale(simpleEllipse, 2))
 
 end TestBoundingBox

@@ -40,3 +40,14 @@ def height(s: Shape): Int = s match
     2 * halfHeight
   case Shape.Group(shapes @ _*) =>
     if shapes.isEmpty then 0 else shapes.map(height).max
+
+
+def scale(s: Shape, factor: Int): Shape = s match
+  case Shape.Rectangle(width, height) =>
+    Shape.Rectangle(width * factor, height * factor)
+  case Shape.Location(x, y, shape) =>
+    Shape.Location(x * factor, y * factor, scale(shape, factor))
+  case Shape.Ellipse(halfWidth, halfHeight) =>
+    Shape.Ellipse(halfWidth * factor, halfHeight * factor)
+  case Shape.Group(shapes @ _*) =>
+    Shape.Group(shapes.map(scale(_, factor)): _*)
