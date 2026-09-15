@@ -29,3 +29,14 @@ def size(s: Shape): Int = s match
     4 * halfWidth * halfHeight
   case Shape.Group(shapes @ _*) =>
     shapes.map(size).sum
+
+
+def height(s: Shape): Int = s match
+  case Shape.Rectangle(_, height) =>
+    height
+  case Shape.Location(_, _, shape) =>
+    height(shape)
+  case Shape.Ellipse(_, halfHeight) =>
+    2 * halfHeight
+  case Shape.Group(shapes @ _*) =>
+    if shapes.isEmpty then 0 else shapes.map(height).max

@@ -8,3 +8,5 @@ ChatGPT recommended to use different files for the functions that are required t
 
 Used CoPilot to fix any type of errros that were occuring towards the end when tests were failing and I couldn't understand the recursion. 
 
+Used to understand the logic and syntax that is needed to implement all functions that were needed such as size, height, scale.
+Used CoPilot to debug any compilations issues that were occurring. 
