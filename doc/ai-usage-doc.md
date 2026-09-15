@@ -1,3 +1,4 @@
+# Documentation
 Used ChatGPT and Claude to understand what the tasks on hand are and where to start. Used it to understand the structure of the code and how it's made. 
 
 Used AI to understand some syntax and elaborate on what should and shouldn't be done to make efficient code.
@@ -9,4 +10,10 @@ ChatGPT recommended to use different files for the functions that are required t
 Used CoPilot to fix any type of errros that were occuring towards the end when tests were failing and I couldn't understand the recursion. 
 
 Used to understand the logic and syntax that is needed to implement all functions that were needed such as size, height, scale.
-Used CoPilot to debug any compilations issues that were occurring. 
+
+CoPilot was used as a debugging aid for overall code. 
+
+Used ChatGPT to aid in adding logger debug output. 
+
+# Tools Used:
+CoPilot, ChatGPT, Claude

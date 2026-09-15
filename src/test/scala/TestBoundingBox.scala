@@ -42,6 +42,7 @@ class TestBoundingBox:
   def testComplexGroup(): Unit =
     testBoundingBox(complexGroup, 30, 60, 470, 320)
 
+
   // tests for size function
   @Test
   def testSizeSimpleRectangle(): Unit =
@@ -50,6 +51,7 @@ class TestBoundingBox:
   @Test
   def testSizeSimpleEllipse(): Unit =
     assertEquals(6000, size(simpleEllipse))
+
 
   // tests for height function
   @Test
