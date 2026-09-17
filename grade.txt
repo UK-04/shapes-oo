@@ -1,0 +1,69 @@
+Project 1a - Detailed evaluation
+GitHub ID: UK-04
+Repository: UK-04--shapes-oo
+Commit evaluated: 9499f3c5b851888d55ce88db08640399aa53d487
+Evaluation date: 2026-09-16
+FINAL GRADE: 3.6 points (6.0 required points; up to 3.0 extra credit)
+
+Build and test verification
+Command: sbt -batch -Dsbt.supershell=false test; exit code 0.
+Environment: sbt.version=1.13.0; Eclipse Adoptium Java 25.0.4.
+Compilation and test execution verified: 12 tests, 12 passed, 0 failed, 0 errors.
+The test command was run on the submitted sources, without repairing student code.
+  TestBoundingBox: 12 tests, 0 failures, 0 errors
+Full log: ../.grading/logs/UK-04--shapes-oo.log
+Separate instructor probes: ../.grading/logs/UK-04--shapes-oo.probe.log (sources kept outside this repository).
+
+Required rubric
+1. Missing shape cases: 0.5/0.5
+   Ellipse and variadic Group cases are added and integrate with the supplied model.
+   Evidence: src/main/scala/shapes.scala:11
+2. boundingBox: 1.0/1.0
+   Recursive rectangle, ellipse, location-offset, and group-union cases give the expected supplied bounding boxes.
+   Evidence: src/main/scala/boundingBox.scala:8
+3. Constructor validation with tests: 0.0/0.5
+   No constructor validity checks or tests.
+   Evidence: No corresponding source/test implementation found.
+4. size: 0.2/0.5
+   Location/group recursion is present, but leaf cases compute area-like values instead of 1. Rectangle(80,120) returns 9600 instead of one leaf.
+   Evidence: src/main/scala/shapes.scala:23
+5. height: 0.2/0.5
+   The recursive maximum traversal computes geometric height, not tree height, and Location adds no level.
+   Evidence: src/main/scala/shapes.scala:34
+6. scale: 0.5/0.5
+   Recursively scales leaf dimensions, location coordinates, and all group members.
+   Evidence: src/main/scala/shapes.scala:45
+7. Collection operations: 0.5/0.5
+   Uses immutable collection mapping/folding and minimum/maximum aggregation in boundingBox, with sum where appropriate.
+   Evidence: src/main/scala/boundingBox.scala:8
+8. TestSize: 0.0/0.5
+   Only two size assertions exist in TestBoundingBox, and both test area-like values rather than leaf counts. No valid TestSize suite.
+   Evidence: No corresponding source/test implementation found.
+9. TestHeight: 0.0/0.5
+   Only two height assertions exist, and both validate geometric height rather than tree height. No valid TestHeight suite.
+   Evidence: No corresponding source/test implementation found.
+10. TestScale: 0.2/0.5
+   Two runnable scale tests cover a rectangle and ellipse. Location/group recursion and the other supplied fixtures are untested; no separate TestScale class.
+   Evidence: No corresponding source/test implementation found.
+11. Configurable library logging: 0.5/0.5
+   Logging-library debug calls and a configurable backend are integrated.
+   Evidence: src/main/scala/boundingBox.scala:5
+
+Required subtotal: 3.6/6.0
+
+Deductions
+Skeleton incompatibility: -0.0. No substantive incompatible changes to the supplied skeleton found.
+AI record: -0.0. doc/ai-usage-doc.md provides a substantive AI-use summary.
+
+Extra credit
+draw behavior: +0.0/2.0. No draw behavior submitted.
+Offline BufferedImage tests: +0.0/1.0. No automated BufferedImage tests submitted.
+
+Calculation: 3.6 - 0.0 + 0.0 = 3.6.
+Final grade: 3.6
+
+General evaluation
+Bounding boxes and scaling are implemented, but size and height were interpreted as geometric measurements rather than tree properties. Correct their base cases and wrapper behavior, then add the six-fixture test suites and constructor checks.
+
+Grading conventions
+Partial rubric credit uses 0.2 increments (0.2/0.4, or full 0.5); extra credit uses 0.5 increments. Tests are assessed individually when compilation and execution succeed. Passing tests do not earn credit for incorrect expectations or missing required coverage. Compatible refactoring is not penalized. Substantive AI summaries/prompt lists are accepted; outside-doc placement costs 0.2, and a missing record costs 1.0 instead. Either consistent edge-count or node-count tree height is accepted. Positive-only versus nonnegative dimension policies, integer scale factors, and unspecified empty-group edge behavior are not independently penalized. Extra credit is added without capping at 6.0.
