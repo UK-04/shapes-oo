@@ -17,3 +17,8 @@ Used ChatGPT to aid in adding logger debug output.
 
 # Tools Used:
 CoPilot, ChatGPT, Claude
+
+
+# Regrade Revisions 
+
+Used Claude to review the graded feedback in grade.txt and revise the submission

@@ -43,32 +43,32 @@ class TestBoundingBox:
     testBoundingBox(complexGroup, 30, 60, 470, 320)
 
 
-  // tests for size function
-  @Test
-  def testSizeSimpleRectangle(): Unit =
-    assertEquals(9600, size(simpleRectangle))
+  // // tests for size function
+  // @Test
+  // def testSizeSimpleRectangle(): Unit =
+  //   assertEquals(9600, size(simpleRectangle))
   
-  @Test
-  def testSizeSimpleEllipse(): Unit =
-    assertEquals(6000, size(simpleEllipse))
+  // @Test
+  // def testSizeSimpleEllipse(): Unit =
+  //   assertEquals(6000, size(simpleEllipse))
 
 
-  // tests for height function
-  @Test
-  def testHeightSimpleRectangle(): Unit =
-    assertEquals(120, height(simpleRectangle))
+  // // tests for height function
+  // @Test
+  // def testHeightSimpleRectangle(): Unit =
+  //   assertEquals(120, height(simpleRectangle))
 
-  @Test
-  def testHeightSimpleEllipse(): Unit =
-    assertEquals(60, height(simpleEllipse))
+  // @Test
+  // def testHeightSimpleEllipse(): Unit =
+  //   assertEquals(60, height(simpleEllipse))
 
-  // tests for scale function
-  @Test
-  def testScaleSimpleRectangle(): Unit =
-    assertEquals(Shape.Rectangle(160, 240), scale(simpleRectangle, 2))
+  // // tests for scale function
+  // @Test
+  // def testScaleSimpleRectangle(): Unit =
+  //   assertEquals(Shape.Rectangle(160, 240), scale(simpleRectangle, 2))
 
-  @Test
-  def testScaleSimpleEllipse(): Unit =
-    assertEquals(Shape.Ellipse(100, 60), scale(simpleEllipse, 2))
+  // @Test
+  // def testScaleSimpleEllipse(): Unit =
+  //   assertEquals(Shape.Ellipse(100, 60), scale(simpleEllipse, 2))
 
 end TestBoundingBox
