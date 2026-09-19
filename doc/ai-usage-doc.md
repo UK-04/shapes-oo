@@ -23,4 +23,5 @@ CoPilot, ChatGPT, Claude
 
 Used Claude to review the graded feedback in grade.txt and revise the submission
 
-With the aid of Claude and CoPilot, I made corrections to the issues that were listed in `grade.txt`. `Height` and `size` were fixed.
+With the aid of Claude and CoPilot, I made corrections to the issues that were listed in `grade.txt`. 
+`Height` and `size` were fixed in `shapes.scala` file.
